@@ -38,7 +38,7 @@
                               <i class="nav-icon fas fa-edit green"></i>
                               
                           </a> ||
-                          <a href="#"@click="DeleteUser(user.id)">
+                          <a href="#" @click="DeleteUser(user.id)">
                               <i class="nav-icon fas fa-trash red"></i>
                           </a>
                       </td>

@@ -28,9 +28,10 @@ Vue.filter('datefor',function(date){
   return moment(date).format('DD-MM-YYYY');
 });
 
-const routes = [
+let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default },
+    { path: '/developer', component: require('./components/Developer.vue').default },
     { path: '/user', component: require('./components/User.vue').default }
   ]
 
@@ -73,3 +74,17 @@ const app = new Vue({
     el: '#app',
     router
 });
+Vue.component(
+  'passport-clients',
+  require('./components/passport/Clients.vue').default
+);
+
+Vue.component(
+  'passport-authorized-clients',
+  require('./components/passport/AuthorizedClients.vue').default
+);
+
+Vue.component(
+  'passport-personal-access-tokens',
+  require('./components/passport/PersonalAccessTokens.vue').default
+);
